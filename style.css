@@ -2,27 +2,29 @@
 <html>
 <head>
 <style>
-body {
+
+/*body {
     background-color: ;
 }
+*/
 
-h1 {
+h4 {
     color: black;
     text-align: left;
 }
 
-p {
+/*p {
     font-family: verdana;
-    font-size: 20px;
-}
+    font-size: 12px;
+}*/
 
-table, th, td {
+/*table, th, td {
     border-bottom: 1px solid ;
     border-left: 1px solid #ddd;
 }
 th {
     text-align: left;
-}
+}*/
 
 
 a {
@@ -36,6 +38,7 @@ a:hover {
 a:active {
     text-decoration: underline;
 }
+
 </style>
 </body>
 </html>
