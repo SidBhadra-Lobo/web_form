@@ -18,11 +18,14 @@ $samplename=$_POST['samplename'];
 $firstname=$_POST['firstname'];
 $lastname=$_POST['lastname'];
 $email=$_POST['email'];
+$date=$_POST['dateof'];
+$check_box=$_POST['check'];
+$sampleplus=$_POST['sampleplus'];
 
 //Execute the query
 
-mysqli_query($connect, "INSERT INTO samples (samplename,firstname,lastname,email)
-                VALUES('$samplename','$firstname','$lastname','$email')");
+mysqli_query($connect, "INSERT INTO samples (samplename,firstname,lastname,email,dateof)
+                VALUES('$samplename','$firstname','$lastname','$email','$dateof')");
 
     if(mysqli_affected_rows($connect) > 0){
     echo "<p>Sample Added</p>";

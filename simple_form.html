@@ -11,11 +11,13 @@ label{display:inline-block;width:100px;margin-bottom:10px;}
     <br>
     <img id="banner" src="images/banner_girihlet.jpg" alt="">
 
-<title>Add Sample</title>
+<title>Sample Submission</title>
 
 <!-- Tiny icon is not working  -->
 <!-- <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 <link rel="icon" href="images/favicon.ico" type="image/x-icon"> -->
+
+<script type="text/javascript" src="table_builder.js"></script>
 
 </head>
 
@@ -24,10 +26,6 @@ label{display:inline-block;width:100px;margin-bottom:10px;}
 <form method="post" action= "parse_names.php">
 
 <h4>For small sample sets, please fill out the table below.</h4>
-
-<label>Sample:</label>
-<input type="text" name="samplename" value="MySample">
-<br>
 
 <label>First Name:</label>
 <input type="text" name="firstname" value="J">
@@ -40,14 +38,159 @@ label{display:inline-block;width:100px;margin-bottom:10px;}
 <label>Email:</label>
 <input type="text" name="email" value="JD@email.com">
 <br>
+
+<label>Date of Submission:
+                    </label>
+                    <select class="date" name="day">
+                        <option value="1">01
+                        </option>
+                        <option value="2">02
+                        </option>
+                        <option value="3">03
+                        </option>
+                        <option value="4">04
+                        </option>
+                        <option value="5">05
+                        </option>
+                        <option value="6">06
+                        </option>
+                        <option value="7">07
+                        </option>
+                        <option value="8">08
+                        </option>
+                        <option value="9">09
+                        </option>
+                        <option value="10">10
+                        </option>
+                        <option value="11">11
+                        </option>
+                        <option value="12">12
+                        </option>
+                        <option value="13">13
+                        </option>
+                        <option value="14">14
+                        </option>
+                        <option value="15">15
+                        </option>
+                        <option value="16">16
+                        </option>
+                        <option value="17">17
+                        </option>
+                        <option value="18">18
+                        </option>
+                        <option value="19">19
+                        </option>
+                        <option value="20">20
+                        </option>
+                        <option value="21">21
+                        </option>
+                        <option value="22">22
+                        </option>
+                        <option value="23">23
+                        </option>
+                        <option value="24">24
+                        </option>
+                        <option value="25">25
+                        </option>
+                        <option value="26">26
+                        </option>
+                        <option value="27">27
+                        </option>
+                        <option value="28">28
+                        </option>
+                        <option value="29">29
+                        </option>
+                        <option value="30">30
+                        </option>
+                        <option value="31">31
+                        </option>
+                    </select>
+                    <select name="month">
+                        <option value="1">January
+                        </option>
+                        <option value="2">February
+                        </option>
+                        <option value="3">March
+                        </option>
+                        <option value="4">April
+                        </option>
+                        <option value="5">May
+                        </option>
+                        <option value="6">June
+                        </option>
+                        <option value="7">July
+                        </option>
+                        <option value="8">August
+                        </option>
+                        <option value="9">September
+                        </option>
+                        <option value="10">October
+                        </option>
+                        <option value="11">November
+                        </option>
+                        <option value="12">December
+                        </option>
+                    </select>  
+                    <select name="year">
+                      <option value="1">2016
+                        </option>
+                        <option value="2">2017
+                        </option>
+                        <option value="3">2018
+                        </option>
+                        <option value="4">2019
+                        </option>
+                        <option value="5">2020
+                        </option>
+                        <option value="6">2021
+                        </option>
+                        <option value="7">2022
+                        </option>
+                        <option value="8">2023
+                        </option>
+                        <option value="9">2024
+                        </option>
+                        <option value="10">2025
+                        </option>
+                        <option value="11">2026
+                        </option>
+                        <option value="12">2027
+                        </option>
+                    </select> 
+<br>
 <br>
 
-<input type="submit" value="Add Sample">
+<fieldset class="samplerow">
+<label>Sample Entry:</label>
+<input type="text" name="samplename" value="MySample0">
+
+<p> 
+  <input type="button" value="Add Sample" onClick="addRow('dataTable')" /> 
+  <input type="button" value="Remove Sample" onClick="deleteRow('dataTable')" /> 
+  <p>(Remove action applies only to entries with check marked check boxes only.)</p>
+</p>
+
+<table id="dataTable" class="form" border="1">
+                  <tbody>
+                    <tr><td><input type="checkbox" required="required" name="check" checked="checked"></td><td>
+                            <label>Sample Name:</label>
+                            <input type="text" required="required" name="Sampleplus">
+                         </td></tr></tbody>
+                </table>
+
+
+
+
+
+<input type="submit" value="Submit Sample(s)">
 
 <br>
 <br>
 
 </form>
+</fieldset>
+
+<!-- <fieldset class="bulksamples"> -->
 
 <h4>For large sample sets:</h4>
     <p><a href='/docs/SubmissionForm.xlsx'>Download Submission Form</a>
