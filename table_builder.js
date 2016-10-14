@@ -3,15 +3,20 @@
 function addRow(tableID) {
     var table = document.getElementById(tableID);
     var rowCount = table.rows.length;
-    if(rowCount < 10){                           // limit the user from creating fields more than your limits
+    if(rowCount < 6){                           // limit the user from creating fields more than your limits
         var row = table.insertRow(rowCount);
         var colCount = table.rows[0].cells.length;
         for(var i=0; i<colCount; i++) {
             var newrow = row.insertCell(i);
+            innerHTML = table.rows[0].cells[i].innerHTML
+            // innerHTML['name'] = "Junk";
+            // console.log(innerHTML);
+            // newrow.innerHTML = innerHTML;
             newrow.innerHTML = table.rows[0].cells[i].innerHTML;
+
         }
     }else{
-         alert("For orders > 10 samples, please consider using the downloadable submission form.");
+         alert("For orders > 6 samples, please consider using the downloadable submission form.");
                
     }
 }

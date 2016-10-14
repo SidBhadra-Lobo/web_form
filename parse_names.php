@@ -1,7 +1,3 @@
-
-
-
-
 <?php include 'database.php'; ?>
 
 <?php
@@ -14,19 +10,50 @@
 // print_r($_POST);
 
 // create a variable
-$samplename=$_POST['samplename'];
+$sample1=$_POST['samplename1'];
 $firstname=$_POST['firstname'];
 $lastname=$_POST['lastname'];
 $email=$_POST['email'];
-$date=$_POST['dateof'];
+//automatic date including?
+$dateof=date("Y-m-d");
 $check_box=$_POST['check'];
-$sampleplus=$_POST['sampleplus'];
+
+$sample2=$_POST['samplename2'];
+$sample3=$_POST['samplename3'];
+$sample4=$_POST['samplename4'];
+$sample5=$_POST['samplename5'];
+$sample6=$_POST['samplename6'];
+
+// if(empty($firstname)){ echo 'You seem to be missing something.' };
+
 
 //Execute the query
 
 mysqli_query($connect, "INSERT INTO samples (samplename,firstname,lastname,email,dateof)
-                VALUES('$samplename','$firstname','$lastname','$email','$dateof')");
+                VALUES('$sample1','$firstname','$lastname','$email','$dateof')");
 
+    if(isset($sample2)){
+        mysqli_query($connect, "INSERT INTO samples (samplename,firstname,lastname,email,dateof)
+                VALUES('$sample2','$firstname','$lastname','$email','$dateof')");
+    }
+
+    if(isset($sample3)){
+        mysqli_query($connect, "INSERT INTO samples (samplename,firstname,lastname,email,dateof)
+                VALUES('$sample3','$firstname','$lastname','$email','$dateof')");
+    }
+    if(isset($sample4)){
+        mysqli_query($connect, "INSERT INTO samples (samplename,firstname,lastname,email,dateof)
+                VALUES('$sample4','$firstname','$lastname','$email','$dateof')");
+    }
+    if(isset($sample5)){
+        mysqli_query($connect, "INSERT INTO samples (samplename,firstname,lastname,email,dateof)
+                VALUES('$sample5','$firstname','$lastname','$email','$dateof')");
+    }
+    if(isset($sample6)){
+        mysqli_query($connect, "INSERT INTO samples (samplename,firstname,lastname,email,dateof)
+                VALUES('$sample6','$firstname','$lastname','$email','$dateof')");
+    }
+    
     if(mysqli_affected_rows($connect) > 0){
     echo "<p>Sample Added</p>";
     echo "<a href='simple_form.html'>Go Back</a>";
@@ -36,6 +63,47 @@ else {
     echo "Sample NOT Added<br />";
     echo mysqli_error ($connect);
 }
+
+// create a variable
+// $samplename=$_POST['samplename2'];
+
+
+
+// mysqli_query($connect, "INSERT INTO samples (samplename,firstname,lastname,email,dateof)
+//                 VALUES('$samplename','$firstname','$lastname','$email','$dateof')");
+
+//     if(mysqli_affected_rows($connect) > 0){
+//     echo "<p>Sample Added</p>";
+//     echo "<a href='simple_form.html'>Go Back</a>";
+//     } 
+
+// else {
+//     echo "Sample NOT Added<br />";
+//     echo mysqli_error ($connect);
+// }
+
+// // create a variable
+// $samplename=$_POST['samplename3'];
+
+
+
+// mysqli_query($connect, "INSERT INTO samples (samplename,firstname,lastname,email,dateof)
+//                 VALUES('$samplename','$firstname','$lastname','$email','$dateof')");
+
+//     if(mysqli_affected_rows($connect) > 0){
+//     echo "<p>Sample Added</p>";
+//     echo "<a href='simple_form.html'>Go Back</a>";
+//     } 
+
+// else {
+//     echo "Sample NOT Added<br />";
+//     echo mysqli_error ($connect);
+// }
+
+
+
+
+
 
 // $servername = "localhost";
 // $username = "bakyt";

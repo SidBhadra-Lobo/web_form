@@ -12,7 +12,6 @@ label{display:inline-block;width:100px;margin-bottom:10px;}
     <img id="banner" src="images/banner_girihlet.jpg" alt="">
 
 <title>Sample Submission</title>
-
 <!-- Tiny icon is not working  -->
 <!-- <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 <link rel="icon" href="images/favicon.ico" type="image/x-icon"> -->
@@ -28,20 +27,22 @@ label{display:inline-block;width:100px;margin-bottom:10px;}
 <h4>For small sample sets, please fill out the table below.</h4>
 
 <label>First Name:</label>
-<input type="text" name="firstname" value="J">
+<input type="text" required="required" name="firstname" placeholder="J">
 <br>
 
 <label>Last Name:</label>
-<input type="text" name="lastname" value="Doe">
+<input type="text" required="required" name="lastname" placeholder="Doe">
 <br>
 
 <label>Email:</label>
-<input type="text" name="email" value="JD@email.com">
+<input type="text" required="required" name="email" placeholder="JD@email.com">
 <br>
 
-<label>Date of Submission:
+<!-- <label>Date of Submission:
                     </label>
                     <select class="date" name="day">
+                        <option value="0">Day
+                        </option>
                         <option value="1">01
                         </option>
                         <option value="2">02
@@ -106,6 +107,8 @@ label{display:inline-block;width:100px;margin-bottom:10px;}
                         </option>
                     </select>
                     <select name="month">
+                        <option value="0">Month
+                        </option>
                         <option value="1">January
                         </option>
                         <option value="2">February
@@ -132,7 +135,9 @@ label{display:inline-block;width:100px;margin-bottom:10px;}
                         </option>
                     </select>  
                     <select name="year">
-                      <option value="1">2016
+                        <option value="0">Year
+                        </option>
+                        <option value="1">2016
                         </option>
                         <option value="2">2017
                         </option>
@@ -156,31 +161,105 @@ label{display:inline-block;width:100px;margin-bottom:10px;}
                         </option>
                         <option value="12">2027
                         </option>
-                    </select> 
-<br>
-<br>
-
-<fieldset class="samplerow">
-<label>Sample Entry:</label>
-<input type="text" name="samplename" value="MySample0">
-
+                    </select>  -->
 <p> 
   <input type="button" value="Add Sample" onClick="addRow('dataTable')" /> 
   <input type="button" value="Remove Sample" onClick="deleteRow('dataTable')" /> 
-  <p>(Remove action applies only to entries with check marked check boxes only.)</p>
+  <p>(Actions apply only to entries with check marked check boxes.)</p>
 </p>
 
+<fieldset class="samplerow">
+<label>Sample Entry:</label>
 <table id="dataTable" class="form" border="1">
-                  <tbody>
-                    <tr><td><input type="checkbox" required="required" name="check" checked="checked"></td><td>
+                <tbody>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="check" checked="checked" tabindex="-1" ></td><td>
                             <label>Sample Name:</label>
-                            <input type="text" required="required" name="Sampleplus">
-                         </td></tr></tbody>
+                            <input type="text" name="samplename1" placeholder="MySample1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="check" checked="checked" tabindex="-1"></td><td>
+                            <label>Sample Name:</label>
+                            <input type="text" name="samplename2" placeholder="MySample2">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="check" checked="checked" tabindex="-1"></td><td>
+                            <label>Sample Name:</label>
+                            <input type="text" name="samplename3" placeholder="MySample3">
+                        </td>
+                    </tr>
+                    <tr style="display: none;">
+                        <td>
+                            <input type="checkbox" name="check" checked="checked" tabindex="-1"></td><td>
+                            <label>Sample Name:</label>
+                            <input type="text" name="samplename4" placeholder="MySample4">
+                        </td>
+                    </tr>
+                    <tr style="display: none;">
+                        <td>
+                            <input type="checkbox" name="check" checked="checked" tabindex="-1"></td><td>
+                            <label>Sample Name:</label>
+                            <input type="text" name="samplename5" placeholder="MySample5">
+                        </td>
+                    </tr>
+                    <tr style="display: none;">
+                        <td>
+                            <input type="checkbox" name="check" checked="checked" tabindex="-1"></td><td>
+                            <label>Sample Name:</label>
+                            <input type="text" name="samplename6" placeholder="MySample6">
+                        </td>
+                    </tr>
+
+
+<!--                     <tr>
+                        <td>
+                            <input type="checkbox" required="required" name="check" checked="checked"></td><td>
+                            <label>Sample Name:</label>
+                            <input type="text" required="required" name="samplename1" placeholder="MySample1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" required="required" name="check" checked="checked"></td><td>
+                            <label>Sample Name:</label>
+                            <input type="text" required="required" name="samplename2" placeholder="MySample2">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" required="required" name="check" checked="checked"></td><td>
+                            <label>Sample Name:</label>
+                            <input type="text" required="required" name="samplename3" placeholder="MySample3">
+                        </td>
+                    </tr>
+                    <tr style="display: none;">
+                        <td>
+                            <input type="checkbox" required="required" name="check" checked="checked"></td><td>
+                            <label>Sample Name:</label>
+                            <input type="text" required="required" name="samplename4" placeholder="MySample4">
+                        </td>
+                    </tr>
+                    <tr style="display: none;">
+                        <td>
+                            <input type="checkbox" required="required" name="check" checked="checked"></td><td>
+                            <label>Sample Name:</label>
+                            <input type="text" required="required" name="samplename5" placeholder="MySample5">
+                        </td>
+                    </tr>
+                    <tr style="display: none;">
+                        <td>
+                            <input type="checkbox" required="required" name="check" checked="checked"></td><td>
+                            <label>Sample Name:</label>
+                            <input type="text" required="required" name="samplename6" placeholder="MySample6">
+                        </td>
+                    </tr>
+ -->                </tbody>
                 </table>
-
-
-
-
 
 <input type="submit" value="Submit Sample(s)">
 
@@ -193,7 +272,7 @@ label{display:inline-block;width:100px;margin-bottom:10px;}
 <!-- <fieldset class="bulksamples"> -->
 
 <h4>For large sample sets:</h4>
-    <p><a href='/docs/SubmissionForm.xlsx'>Download Submission Form</a>
+    <p><a href='docs/SubmissionForm.xlsx'>Download Submission Form</a>
         <img src='images/excel.gif' height="16" width="16" align="left" border="0"><p>
 
     <p><a href='https://www.dropbox.com/request/sGEYIe96uMWPGjAvMIBG' target="_blank" class="dropbox-saver">Upload Submission Form</a>
