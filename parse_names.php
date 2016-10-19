@@ -18,11 +18,7 @@ $email=$_POST['email'];
 $dateof=date("Y-m-d");
 $check_box=$_POST['check'];
 
-$sample2=$_POST['samplename2'];
-$sample3=$_POST['samplename3'];
-$sample4=$_POST['samplename4'];
-$sample5=$_POST['samplename5'];
-$sample6=$_POST['samplename6'];
+
 
 // if(empty($firstname)){ echo 'You seem to be missing something.' };
 
@@ -32,28 +28,34 @@ $sample6=$_POST['samplename6'];
 mysqli_query($connect, "INSERT INTO samples (samplename,firstname,lastname,email,dateof)
                 VALUES('$sample1','$firstname','$lastname','$email','$dateof')");
 
-    if(isset($sample2)){
-        mysqli_query($connect, "INSERT INTO samples (samplename,firstname,lastname,email,dateof)
-                VALUES('$sample2','$firstname','$lastname','$email','$dateof')");
-    }
+// $sample2=$_POST['samplename2'];
+// $sample3=$_POST['samplename3'];
+// $sample4=$_POST['samplename4'];
+// $sample5=$_POST['samplename5'];
+// $sample6=$_POST['samplename6'];
 
-    if(isset($sample3)){
-        mysqli_query($connect, "INSERT INTO samples (samplename,firstname,lastname,email,dateof)
-                VALUES('$sample3','$firstname','$lastname','$email','$dateof')");
-    }
-    if(isset($sample4)){
-        mysqli_query($connect, "INSERT INTO samples (samplename,firstname,lastname,email,dateof)
-                VALUES('$sample4','$firstname','$lastname','$email','$dateof')");
-    }
-    if(isset($sample5)){
-        mysqli_query($connect, "INSERT INTO samples (samplename,firstname,lastname,email,dateof)
-                VALUES('$sample5','$firstname','$lastname','$email','$dateof')");
-    }
-    if(isset($sample6)){
-        mysqli_query($connect, "INSERT INTO samples (samplename,firstname,lastname,email,dateof)
-                VALUES('$sample6','$firstname','$lastname','$email','$dateof')");
-    }
-    
+//     if($sample2 != ''){
+//         mysqli_query($connect, "INSERT INTO samples (samplename,firstname,lastname,email,dateof)
+//                 VALUES('$sample2','$firstname','$lastname','$email','$dateof')");
+//     }
+//     if($sample3 != ''){
+//         mysqli_query($connect, "INSERT INTO samples (samplename,firstname,lastname,email,dateof)
+//                 VALUES('$sample3','$firstname','$lastname','$email','$dateof')");
+//     }
+//     if($sample4 != ''){
+//         mysqli_query($connect, "INSERT INTO samples (samplename,firstname,lastname,email,dateof)
+//                 VALUES('$sample4','$firstname','$lastname','$email','$dateof')");
+//     }
+//     if($sample5 != ''){
+//         mysqli_query($connect, "INSERT INTO samples (samplename,firstname,lastname,email,dateof)
+//                 VALUES('$sample5','$firstname','$lastname','$email','$dateof')");
+//     }
+//     // if($sample6 != ''){
+//     if($sample6 != ''){
+//         mysqli_query($connect, "INSERT INTO samples (samplename,firstname,lastname,email,dateof)
+//                 VALUES('$sample6','$firstname','$lastname','$email','$dateof')");
+//     }
+
     if(mysqli_affected_rows($connect) > 0){
     echo "<p>Sample Added</p>";
     echo "<a href='simple_form.html'>Go Back</a>";
